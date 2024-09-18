@@ -38,15 +38,26 @@ kotlin {
             implementation(compose.material3)
             implementation(compose.components.resources)
             implementation(compose.components.uiToolingPreview)
+
             implementation(libs.coil)
             implementation(libs.coil.network.ktor)
+
             implementation(libs.napier)
+
             implementation(libs.kotlinx.coroutines.core)
-            implementation(libs.ktor.core)
-            implementation(libs.kotlinx.serialization.json)
+
+            implementation(libs.bundles.ktor)
+
+            implementation(libs.essenty.lifecycle.coroutines)
+
+            implementation(libs.navigation.compose)
+
             implementation(libs.kotlinx.datetime)
+
             api(libs.koin.core)
             implementation(libs.koin.compose)
+
+            implementation(libs.bundles.mvikotlin)
         }
 
         commonTest.dependencies {
