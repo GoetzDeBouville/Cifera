@@ -56,6 +56,12 @@ kotlin {
             implementation(libs.koin.compose)
 
             implementation(libs.bundles.mvikotlin)
+
+
+            implementation(libs.kotlinx.serialization)
+
+            implementation(libs.decompose)
+            implementation(libs.decompose.jetbrains)
         }
 
         commonTest.dependencies {

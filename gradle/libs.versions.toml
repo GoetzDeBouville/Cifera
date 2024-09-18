@@ -18,6 +18,9 @@ kotlinx-datetime = "0.6.1"
 koin = "4.0.0-RC2"
 sqlDelight = "2.0.2"
 
+decompose = "3.1.0"
+kotlinxSerialization = "1.6.1"
+
 essenty = "2.1.0"
 mvi = "4.2.0"
 
@@ -62,6 +65,11 @@ mvikotlin-main = { module = "com.arkivanov.mvikotlin:mvikotlin-main", version.re
 mvikotlin-logging = { module = "com.arkivanov.mvikotlin:mvikotlin-logging", version.ref = "mvi" }
 mvikotlin-timetravel = { module = "com.arkivanov.mvikotlin:mvikotlin-timetravel", version.ref = "mvi" }
 mvikotlin-extensions-coroutines = { module = "com.arkivanov.mvikotlin:mvikotlin-extensions-coroutines", version.ref = "mvi" }
+
+# Decompose
+decompose = { module = "com.arkivanov.decompose:decompose", version.ref = "decompose" }
+decompose-jetbrains = { module = "com.arkivanov.decompose:extensions-compose-jetbrains", version.ref = "decompose" }
+kotlinx-serialization = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerialization" }
 
 
 [bundles]

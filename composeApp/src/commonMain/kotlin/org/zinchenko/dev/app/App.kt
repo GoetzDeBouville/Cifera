@@ -26,9 +26,6 @@ internal fun App() = AppTheme {
     DemoScreen()
 }
 
-
-
-
 @Composable
 fun DemoScreen() {
     Column(
