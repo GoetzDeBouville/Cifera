@@ -50,8 +50,6 @@ kotlin {
 
             implementation(libs.essenty.lifecycle.coroutines)
 
-            implementation(libs.navigation.compose)
-
             implementation(libs.kotlinx.datetime)
 
             api(libs.koin.core)
@@ -86,17 +84,16 @@ kotlin {
             implementation(libs.ktor.client.darwin)
             implementation(libs.sqlDelight.driver.native)
         }
-
     }
 }
 
 android {
     namespace = "org.zinchenko.dev.app"
-    compileSdk = 35
+    compileSdk = libs.versions.android.compile.sdk.get().toInt()
 
     defaultConfig {
-        minSdk = 21
-        targetSdk = 35
+        minSdk = libs.versions.android.min.sdk.get().toInt()
+        targetSdk = libs.versions.android.target.sdk.get().toInt()
 
         applicationId = "org.zinchenko.dev.app.androidApp"
         versionCode = 1
