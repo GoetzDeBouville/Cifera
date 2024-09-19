@@ -4,7 +4,7 @@ android-compile-sdk = "35"
 android-min-sdk = "26"
 android-target-sdk = "35"
 
-kotlin = "2.0.20"
+kotlin = "2.1.0-Beta1"
 compose = "1.7.0-beta02"
 agp = "8.6.0"
 androidx-activityCompose = "1.9.2"
@@ -18,8 +18,8 @@ kotlinx-datetime = "0.6.1"
 koin = "4.0.0-RC2"
 sqlDelight = "2.0.2"
 
-decompose = "3.1.0"
-kotlinxSerialization = "1.6.1"
+decompose = "3.2.0-beta01"
+kotlinxSerialization = "1.7.2"
 
 essenty = "2.1.0"
 mvi = "4.2.0"
@@ -69,8 +69,8 @@ mvikotlin-extensions-coroutines = { module = "com.arkivanov.mvikotlin:mvikotlin-
 # Decompose
 decompose = { module = "com.arkivanov.decompose:decompose", version.ref = "decompose" }
 decompose-jetbrains = { module = "com.arkivanov.decompose:extensions-compose-jetbrains", version.ref = "decompose" }
-kotlinx-serialization = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerialization" }
 
+kotlinx-serialization = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerialization" }
 
 [bundles]
 ktor = [
@@ -86,6 +86,11 @@ mvikotlin = [
     "mvikotlin-logging",
     "mvikotlin-timetravel",
     "mvikotlin-extensions-coroutines"
+]
+
+decompose = [
+    "decompose",
+    "decompose-jetbrains"
 ]
 
 [plugins]

@@ -46,8 +46,6 @@ kotlin {
 
             implementation(libs.kotlinx.coroutines.core)
 
-            implementation(libs.bundles.ktor)
-
             implementation(libs.essenty.lifecycle.coroutines)
 
             implementation(libs.kotlinx.datetime)
@@ -57,11 +55,12 @@ kotlin {
 
             implementation(libs.bundles.mvikotlin)
 
-
             implementation(libs.kotlinx.serialization)
 
-            implementation(libs.decompose)
-            implementation(libs.decompose.jetbrains)
+//            implementation(libs.bundles.decompose)
+
+            implementation(project(":core:network"))
+            implementation(project(":core:database"))
         }
 
         commonTest.dependencies {
@@ -75,20 +74,15 @@ kotlin {
             implementation(compose.uiTooling)
             implementation(libs.androidx.activityCompose)
             implementation(libs.kotlinx.coroutines.android)
-            implementation(libs.ktor.client.okhttp)
-            implementation(libs.sqlDelight.driver.android)
         }
 
         jvmMain.dependencies {
             implementation(compose.desktop.currentOs)
             implementation(libs.kotlinx.coroutines.swing)
-            implementation(libs.ktor.client.okhttp)
-            implementation(libs.sqlDelight.driver.sqlite)
         }
 
         iosMain.dependencies {
-            implementation(libs.ktor.client.darwin)
-            implementation(libs.sqlDelight.driver.native)
+            // dependencies
         }
     }
 }
