@@ -29,6 +29,3 @@ dependencyResolutionManagement {
     }
 }
 include(":composeApp")
-
-include(":core:network")
-include(":core:database")

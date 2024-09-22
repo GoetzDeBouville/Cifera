@@ -20,10 +20,11 @@ import org.jetbrains.compose.resources.Font
 import org.jetbrains.compose.resources.stringResource
 import org.jetbrains.compose.resources.vectorResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
+import org.zinchenko.dev.app.features.main.MainScreen
 
 @Composable
 internal fun App() = AppTheme {
-    DemoScreen()
+    MainScreen()
 }
 
 @Composable

@@ -1,3 +1,4 @@
+import com.android.ide.common.symbols.parseManifest
 import org.jetbrains.compose.ExperimentalComposeLibrary
 import org.jetbrains.compose.desktop.application.dsl.TargetFormat
 import org.jetbrains.kotlin.gradle.plugin.KotlinSourceSetTree
@@ -46,8 +47,6 @@ kotlin {
 
             implementation(libs.kotlinx.coroutines.core)
 
-            implementation(libs.essenty.lifecycle.coroutines)
-
             implementation(libs.kotlinx.datetime)
 
             api(libs.koin.core)
@@ -56,11 +55,10 @@ kotlin {
             implementation(libs.bundles.mvikotlin)
 
             implementation(libs.kotlinx.serialization)
+            implementation(libs.bundles.ktor)
 
 //            implementation(libs.bundles.decompose)
 
-            implementation(project(":core:network"))
-            implementation(project(":core:database"))
         }
 
         commonTest.dependencies {
@@ -74,15 +72,20 @@ kotlin {
             implementation(compose.uiTooling)
             implementation(libs.androidx.activityCompose)
             implementation(libs.kotlinx.coroutines.android)
+            implementation(libs.sqlDelight.driver.android)
+            implementation(libs.ktor.client.okhttp)
         }
 
         jvmMain.dependencies {
             implementation(compose.desktop.currentOs)
             implementation(libs.kotlinx.coroutines.swing)
+            implementation(libs.sqlDelight.driver.sqlite)
+            implementation(libs.ktor.client.okhttp)
         }
 
         iosMain.dependencies {
-            // dependencies
+            implementation(libs.sqlDelight.driver.native)
+            implementation(libs.ktor.client.darwin)
         }
     }
 }
